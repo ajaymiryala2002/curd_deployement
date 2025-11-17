@@ -81,18 +81,16 @@ WSGI_APPLICATION = 'django_curd_operations1.wsgi.application'
 #     }
 # }
 
+import dj_database_url
 import os
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('app1_employees'),
-        'USER': os.environ.get('root'),
-        'PASSWORD': os.environ.get('Ajay@2002'),
-        'HOST': os.environ.get('localhost'),
-        'PORT': os.environ.get('3306'),
-    }
+    'default': dj_database_url.parse(
+        os.environ.get("DATABASE_URL"),
+        conn_max_age=600
+    )
 }
+
 
 
 # Password validation
