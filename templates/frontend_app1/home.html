@@ -9,13 +9,13 @@
     <table border="2">
         <tr>
             <th>emp_name</th>
-            <th>emp_pin</th>
+            <th>emp_id</th>
             <th>emp_email</th>
         </tr>
         {% for x in  data %}
         <tr>
             <td>{{ x.emp_name}}</td>
-            <td>{{x.emp_pin}}</td>
+            <td>{{x.emp_id}}</td>
             <td>{{x.emp_email}}</td>
         </tr>
         {% endfor %}
