@@ -81,16 +81,19 @@ WSGI_APPLICATION = 'django_curd_operations1.wsgi.application'
 #     }
 # }
 
+import os
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "django_curd_deployee",
-        "USER": "root",
-        "PASSWORD": "Ajay@2002",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('app1_employees'),
+        'USER': os.environ.get('root'),
+        'PASSWORD': os.environ.get('Ajay@2002'),
+        'HOST': os.environ.get('localhost'),
+        'PORT': os.environ.get('3306'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
