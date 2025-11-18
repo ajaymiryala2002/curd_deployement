@@ -86,7 +86,7 @@ import os
 
 DATABASES = {
     'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL"),
+        os.environ.get("postgresql://mydatabase_jc5q_user:XGFzpCVVqdGEv14Ln9AVnEWATjppwjli@dpg-d4dkfaq4d50c73dr12n0-a/mydatabase_jc5q"),
         conn_max_age=600
     )
 }
